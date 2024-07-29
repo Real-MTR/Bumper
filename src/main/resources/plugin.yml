@@ -1,0 +1,4 @@
+name: Bumper
+version: '1.0'
+main: xyz.atomdev.bumper.Bumper
+api-version: '1.18'
