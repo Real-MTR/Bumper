@@ -1,14 +1,17 @@
 package xyz.atomdev.bumper;
 
+import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
+import xyz.atomdev.bumper.disguise.DisguiseManager;
 
-public final class Bumper extends JavaPlugin {
+@Getter
+public final class Bumper {
 
-    @Override
-    public void onEnable() {
-    }
+    private final JavaPlugin plugin;
+    private final DisguiseManager disguiseManager;
 
-    @Override
-    public void onDisable() {
+    public Bumper(JavaPlugin plugin) {
+        this.plugin = plugin;
+        this.disguiseManager = new DisguiseManager(this);
     }
 }
